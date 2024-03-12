@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: TS-Reg, sans-serif;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  max-width: 1135px;
+  background-color: yellow;
+  padding: 0px, 20px;
+  margin: 0, auto;
+  align-items: center;
+}
+
+.logo {
+  width: 190px;
+  height: 40px;
+}
+
+header .container {
+  justify-content: space-between;
+}
+.menu-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
