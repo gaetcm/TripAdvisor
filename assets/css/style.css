@@ -6,23 +6,44 @@ body {
   font-family: TS-Reg, sans-serif;
 }
 
-header {
+header > div {
   display: flex;
   justify-content: center;
   width: 100%;
   align-items: center;
 }
 
+header a {
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+i {
+  padding: 5px;
+}
+
+main p {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+header a:hover {
+  background-color: grey;
+  border-radius: 20px;
+  color: white;
+}
+
 .container {
-  display: flex;
   width: 1135px;
   padding: 0 20px;
   margin: 0 auto;
-  align-items: center;
 }
 
 main {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .logo {
@@ -33,10 +54,39 @@ main {
 header .container {
   justify-content: space-between;
 }
+
+header nav {
+  width: 500px;
+}
 .menu-nav {
   display: flex;
-  justify-content: flex-end;
-  align-content: flex-end;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.navigation a {
+  height: 60px;
+  display: flex;
+  flex: 1;
+  font-size: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.navigation a:hover {
+  background-color: black;
+  color: white;
 }
 
 h1 {
@@ -46,44 +96,22 @@ h1 {
   line-height: 70px;
 }
 
-nav {
-  font-family: Trip;
+.imagesfront {
+  display: flex;
+  flex-flow: column;
 }
 
 /* boutton */
 button {
-  display: inline-block;
+  font-family: TS-Reg, sans-serif;
   background-color: black;
   border-radius: 20px;
+  height: 30px;
   color: #eeeeee;
   text-align: center;
-  font-size: 12px;
-  padding: 5px;
   width: 140 px;
-  transition: all 0.5s;
   cursor: pointer;
-  margin: 2px;
-}
-button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-button span:after {
-  content: "\00bb";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  transition: 0.5s;
 }
 button:hover {
   background-color: grey;
-}
-button:hover span {
-  padding-right: 25px;
-}
-button:hover span:after {
-  opacity: 1;
-  right: 0;
 }
