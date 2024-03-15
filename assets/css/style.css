@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "TS-Reg", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -28,6 +28,14 @@ header a {
   text-align: center;
 }
 
+.burger-menu {
+  display: none;
+}
+
+.last-span-header {
+  display: none;
+}
+
 footer {
   margin-top: 150px;
   display: flex;
@@ -40,14 +48,13 @@ footer {
 
 footer img {
   width: 40px;
-  padding-right: 5px;
+  margin-right: 5px;
 }
 
 footer img:hover {
   width: 40px;
   cursor: pointer;
   transform: rotate(0.5turn);
-  padding-right: 5px;
 }
 
 i {
@@ -61,7 +68,9 @@ main p {
 }
 
 .container {
-  width: 1135px;
+  border: 1px solid red;
+  width: 100%;
+  max-width: 1135px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -92,6 +101,7 @@ header nav {
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .navigation a {
@@ -106,7 +116,10 @@ header nav {
   color: black;
   justify-content: space-between;
   /* align-items: center; */
-  margin-bottom: 20px;
+}
+.navigation a:hover {
+  background-color: black;
+  color: white;
 }
 
 .menu-nav a:hover {
@@ -176,8 +189,8 @@ h2 {
   object-fit: cover;
 }
 .left-bloc img {
-  max-height: 100%;
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -185,15 +198,20 @@ h2 {
   margin-bottom: 2px;
 }
 
+.navigation .responsivnav {
+  display: none;
+}
+
 /* boutton */
 button {
-  font-family: TS-Reg, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: black;
   border-radius: 20px;
-  height: 30px;
+  height: 35px;
   color: #eeeeee;
   text-align: center;
   width: 140 px;
+  border: 0;
   cursor: pointer;
 }
 button:hover {
@@ -215,9 +233,8 @@ button:hover {
 
 h5 {
   font-size: 18px;
-  margin-top: 5px;
-  margin-left: 5px;
 }
+
 .col2 p {
   margin-left: 5px;
 }
@@ -297,7 +314,7 @@ h5 {
 /*partie 3*/
 
 .guide {
-  height: 300px;
+  border: 1px blue solid;
   margin: 15px 0px;
   display: flex;
   flex-direction: row;
@@ -307,7 +324,12 @@ h5 {
 }
 .guide img {
   width: 100%;
-  height: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.guide h5 {
+  width: 92%;
 }
 
 /* ------ second part ------ */
@@ -388,6 +410,71 @@ div.column2 img {
   border-radius: 0 0 10px 10px;
 }
 
+.sectionform {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 420px;
+  height: 650px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+form h2 {
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 0 5px;
+  margin: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 50px;
+  width: 270px;
+}
+
+textarea {
+  height: 120px;
+  width: 270px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  padding-top: 10px;
+  margin: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.buttonform {
+  background-color: #04aa6c;
+  border: none;
+  border-radius: 5px;
+  margin-top: 25px;
+  height: 60px;
+  width: 200px;
+  font-size: 16px;
+}
+
+.buttonform:hover {
+  background-color: white;
+  border: 4px solid black;
+  color: black;
+}
+
 /* media query */
 @media (max-width: 1024px) {
   .right-bloc {
@@ -395,8 +482,32 @@ div.column2 img {
   }
 }
 
-@media (min-width: 768px) {
-  .responsivnav {
-    display: block;
+@media (max-width: 768px) {
+  .navigation .responsivnav {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu-nav a {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: inherit;
+  }
+}
+
+@media (max-width: 768px) {
+  .last-span-header {
+    display: inherit;
   }
 }

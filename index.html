@@ -15,6 +15,7 @@
   <body>
     <header>
       <div class="container">
+        <div class="burger-menu"><i class="fa-solid fa-bars"></i></div>
         <div>
           <a href="https://www.tripadvisor.fr/">
             <img class="logo" src="assets/imgs/Tripadvisor_logo.svg"
@@ -25,11 +26,13 @@
           <a href="#"><i class="fa-regular fa-heart"></i>Voyages</a>
           <a href="#"><i class="fa-regular fa-bell"></i>Alertes</a>
           <button class="button">Connectez-vous</button>
+          <span class="last-span-header"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
           <a href="#"><i class="fa-solid fa-cart-shopping"></i>Panier</a>
         </nav>
       </div>
     </header>
-
     <main>
       <div class="container">
         <h1><span style="color: #ff5e5e">Explorez</span> Paris</h1>
@@ -39,12 +42,16 @@
         </p>
 
         <div class="navigation">
-          <a href="#"><span>Hotel</span><i class="fa-solid fa-bed"></i></a>
-          <a href="#"
-            ><span>Location de vacances</span><i class="fa-solid fa-house"></i
-          ></a>
-          <a href="#"
-            ><span>Activités</span><i class="fa-solid fa-volleyball"></i
+          <a href="#">
+            <span>Hotel</span>
+            <i class="fa-solid fa-bed"></i>
+          </a>
+          <a href="#">
+            <span>Location de vacances</span>
+            <i class="fa-solid fa-house"></i>
+          </a>
+          <a href="#">
+            <span>Activités</span><i class="fa-solid fa-volleyball"></i
           ></a>
           <a href="#"
             ><span>Restaurants</span><i class="fa-solid fa-utensils"></i
@@ -53,10 +60,11 @@
             ><span>Forum de voyages</span><i class="fa-solid fa-message"></i
           ></a>
           <a class="responsivnav" href="#"
-            ><span>Vols</span><i class="fa-regular fa-plane"></i></i
-          ></a>
-          <a class="responsivnav" href="#"
-            ><span>Croisières</span><i class="fa-sharp fa-regular fa-ship"></i></i
+            ><span>Vols</span><i class="fa-solid fa-plane"></i>
+          </a>
+          <a class="responsivnav" href="#">
+            <span>Croisières</span>
+            <i class="fa-solid fa-ship"></i
           ></a>
           <a href="#"><span>Plus</span><i class="fa-solid fa-ellipsis"></i></a>
         </div>
@@ -74,7 +82,6 @@
         <p>Europe, France, île-de-France, Paris</p>
         <p>Visiter:Paris</p>
 
-        <!----------- 2eme partie ----------->
         <section class="second-section">
           <div class="flex">
             <div class="column1">
@@ -383,5 +390,25 @@
       <img src="assets/imgs/favicon-tripadvisor.svg" />
       <p>Made at Le Reacteur by Gaëtan Courtemanche 😀</p>
     </footer>
+    <div class="sectionform">
+      <form>
+        <h2>Formulaire de contact</h2>
+        <label for="firstname"></label>
+        <input type="text" id="firstname" placeholder="Prénom" />
+        <label for="lastname"></label>
+        <input type="text" id="lastname" placeholder="Nom" />
+        <label for="email"></label>
+        <input type="email" id="email" placeholder="Email" />
+        <label for="message"></label>
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Écrivez votre message ici..."
+        ></textarea>
+        <button class="buttonform">Envoyer le formulaire</button>
+      </form>
+    </div>
   </body>
 </html>
